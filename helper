@@ -1,0 +1,35 @@
+// Helper function to calculate the perimeter of a rectangle
+function calculateRectanglePerimeter(length, width) {
+  return 2 * (length + width);
+}
+
+// Helper function to check if a number is even
+function isEven(number) {
+  return number % 2 === 0;
+}
+
+// Helper function to generate a random number between min and max (inclusive)
+function generateRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Function to check if a string is a palindrome
+function isPalindrome(str) {
+  const reversedStr = str.split('').reverse().join('');
+  return str === reversedStr;
+}
+
+// Example usage
+const rectangleLength = 5;
+const rectangleWidth = 7;
+console.log(`Perimeter of a rectangle with length ${rectangleLength} and width ${rectangleWidth} is:`, calculateRectanglePerimeter(rectangleLength, rectangleWidth));
+
+const testNumber = 24;
+console.log(`${testNumber} is even:`, isEven(testNumber));
+
+const minRandomInt = 1;
+const maxRandomInt = 100;
+console.log(`Random integer between ${minRandomInt} and ${maxRandomInt} is:`, generateRandomNumber(minRandomInt, maxRandomInt));
+
+const palindromeString = "level";
+console.log(`"${palindromeString}" is a palindrome:`, isPalindrome(palindromeString));
